@@ -10,44 +10,44 @@ Here Are The List Of Books Fetched From The Server
   {{partial "books/p2index"}}
 </ul>
 
-<div style="height:50px;overflow: auto">
+<div style="border: 2px solid #73AD21; height:50px;overflow: auto">
   {{#x-select value=selections multiple=false action="selectionsChanged"}}
     {{#each model.books as |book|}}
-      {{#x-option value=book.title}}{{book.title}}{{/x-option}}
+      {{#x-option value=book.id}}{{book.title}}{{/x-option}}
     {{/each}}
   {{/x-select}}
     <br/>
   {{#x-select value=selections multiple=false action="selectionsChanged"}}
     {{#each model.books as |book|}}
-      {{#x-option value=book.title}}{{book.title}}{{/x-option}}
-    {{/each}}
-  {{/x-select}}
-    <br/>
-
-  {{#x-select value=selections multiple=false action="selectionsChanged"}}
-    {{#each model.books as |book|}}
-      {{#x-option value=book.title}}{{book.title}}{{/x-option}}
+      {{#x-option value=book.id}}{{book.title}}{{/x-option}}
     {{/each}}
   {{/x-select}}
     <br/>
 
   {{#x-select value=selections multiple=false action="selectionsChanged"}}
     {{#each model.books as |book|}}
-      {{#x-option value=book.title}}{{book.title}}{{/x-option}}
+      {{#x-option value=book.id}}{{book.title}}{{/x-option}}
     {{/each}}
   {{/x-select}}
     <br/>
 
   {{#x-select value=selections multiple=false action="selectionsChanged"}}
     {{#each model.books as |book|}}
-      {{#x-option value=book.title}}{{book.title}}{{/x-option}}
+      {{#x-option value=book.id}}{{book.title}}{{/x-option}}
     {{/each}}
   {{/x-select}}
     <br/>
 
   {{#x-select value=selections multiple=false action="selectionsChanged"}}
     {{#each model.books as |book|}}
-      {{#x-option value=book.title}}{{book.title}}{{/x-option}}
+      {{#x-option value=book.id}}{{book.title}}{{/x-option}}
+    {{/each}}
+  {{/x-select}}
+    <br/>
+
+  {{#x-select value=selections multiple=false action="selectionsChanged"}}
+    {{#each model.books as |book|}}
+      {{#x-option value=book.id}}{{book.title}}{{/x-option}}
     {{/each}}
   {{/x-select}}
 </div>

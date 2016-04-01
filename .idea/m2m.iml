@@ -21,5 +21,7 @@
     <orderEntry type="library" name="bower_components ember_sample2" level="project" />
     <orderEntry type="library" name="node_modules ember_html_select_x" level="project" />
     <orderEntry type="library" name="bower_components ember_html_select_x" level="project" />
+    <orderEntry type="library" name="node_modules ember_html_select_x2" level="project" />
+    <orderEntry type="library" name="bower_components ember_html_select_x2" level="project" />
   </component>
 </module>
