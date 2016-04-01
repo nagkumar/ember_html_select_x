@@ -1,0 +1,53 @@
+Here Are The List Of Books Fetched From The Server
+<ul>
+    <h2>Books:</h2>
+    <ul>
+      {{#each model.books as |book|}}
+          <li>{{{book.title}}}</li>
+      {{/each}}
+    </ul>
+  {{partial "books/p1index"}}
+  {{partial "books/p2index"}}
+</ul>
+
+<div style="height:50px;overflow: auto">
+  {{#x-select value=selections multiple=false action="selectionsChanged"}}
+    {{#each model.books as |book|}}
+      {{#x-option value=book.title}}{{book.title}}{{/x-option}}
+    {{/each}}
+  {{/x-select}}
+    <br/>
+  {{#x-select value=selections multiple=false action="selectionsChanged"}}
+    {{#each model.books as |book|}}
+      {{#x-option value=book.title}}{{book.title}}{{/x-option}}
+    {{/each}}
+  {{/x-select}}
+    <br/>
+
+  {{#x-select value=selections multiple=false action="selectionsChanged"}}
+    {{#each model.books as |book|}}
+      {{#x-option value=book.title}}{{book.title}}{{/x-option}}
+    {{/each}}
+  {{/x-select}}
+    <br/>
+
+  {{#x-select value=selections multiple=false action="selectionsChanged"}}
+    {{#each model.books as |book|}}
+      {{#x-option value=book.title}}{{book.title}}{{/x-option}}
+    {{/each}}
+  {{/x-select}}
+    <br/>
+
+  {{#x-select value=selections multiple=false action="selectionsChanged"}}
+    {{#each model.books as |book|}}
+      {{#x-option value=book.title}}{{book.title}}{{/x-option}}
+    {{/each}}
+  {{/x-select}}
+    <br/>
+
+  {{#x-select value=selections multiple=false action="selectionsChanged"}}
+    {{#each model.books as |book|}}
+      {{#x-option value=book.title}}{{book.title}}{{/x-option}}
+    {{/each}}
+  {{/x-select}}
+</div>
