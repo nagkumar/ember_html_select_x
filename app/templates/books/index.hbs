@@ -10,7 +10,7 @@ Here Are The List Of Books Fetched From The Server
   {{partial "books/p2index"}}
 </ul>
 
-<div style="border: 2px solid #73AD21; height:50px;overflow: auto">
+<div style="border: 2px solid #73AD21; height:250px;overflow: auto">
   {{#x-select value=selections multiple=false action="selectionsChanged"}}
     {{#each model.books as |book|}}
       {{#x-option value=book.id}}{{book.title}}{{/x-option}}
@@ -18,10 +18,10 @@ Here Are The List Of Books Fetched From The Server
   {{/x-select}}
     <br/>
     <br/>  {{#x-select value=selections multiple=false action="selectionsChanged"}}
-    {{#each model.books as |book|}}
-      {{#x-option value=book.id}}{{book.title}}{{/x-option}}
-    {{/each}}
-  {{/x-select}}
+  {{#each model.books as |book|}}
+    {{#x-option value=book.id}}{{book.title}}{{/x-option}}
+  {{/each}}
+{{/x-select}}
     <br/>
     <br/>
   {{#x-select value=selections multiple=false action="selectionsChanged"}}
@@ -47,9 +47,34 @@ Here Are The List Of Books Fetched From The Server
     <br/>
     <br/>
 
-  {{#x-select value=selections multiple=false action="selectionsChanged"}}
+  {{#x-select value=selections multiple=true action="selectionsChanged"}}
     {{#each model.books as |book|}}
-      {{#x-option value=book.id}}{{book.title}}{{/x-option}}
+      {{#x-option value=book.id}}{{book.id}}{{/x-option}}
     {{/each}}
   {{/x-select}}
+
+    <br/>
+    <br/>
+
+
+
+  {{log model.books}}
+  {{view "select"
+  content=model.books
+  optionValuePath="content.id"
+  optionLabelPath="content.title"
+  prompt="Please select a name ember select"
+  value=2}}
+    <br/>
+    <br/>
+{{x-select value=selections multiple=false action="selectionsChanged" content=model.books optionValuePath="content.id" optionLabelPath="content.title" prompt="Please select a name ember x-select"}}
+    <br/>
+    <br/>
+  {{select-picker value=myModel.myAttr
+  content=theContent
+  optionGroupPath="group"
+  optionLabelPath="content.name"
+  optionValuePath="content.id"}}
+    <br/>
+    <br/>
 </div>
